@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+.card-component{
+     padding: 15px 50px;
+     font-family: 'Rubik', sans-serif;
+}
+h1{
+     font-size: 35px;
+}
+.para{
+     font-size: 15px;
+     line-height: 1.5;
+     opacity: 0.8;
+}
+span{
+     color: #b759cb;
+}
+.group-stats{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+}
+h2{
+     padding-top: 30px;
+     margin: 0;
+}
+.name-stats{
+     opacity: 0.7;
+     margin: 0;
+     margin-top: 5px;
+     text-transform: uppercase;
+}
