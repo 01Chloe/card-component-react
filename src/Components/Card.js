@@ -1,10 +1,18 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { ThemeContext } from '../Context/ThemeContext'
 import './Card.css'
+import BtnToggle from './BtnToggle'
+import Image from './Image'
 
 export default function Card() {
+
+     const {theme} = useContext(ThemeContext)
+
      return (
-          <div className='card-component'>
-               <h1>Get <span> insights</span> that help your business grow.</h1>
+          <div className={theme ? 'container dark' : 'container light'}>
+          <div className={theme ? 'card dark' : 'card light'}>
+          <div className='card-component' >
+               <h1>Get <span className={theme ? 'span purple' : 'span yellow'}> insights</span> that help your business grow.</h1>
                <p className='para'>Discover the benefits of data analytics and make better decisions regarding revenue, curstomer experience, and overwall efficiency.</p>
                <div className='group-stats'>
                     <div className='stats'>
@@ -20,6 +28,10 @@ export default function Card() {
                          <p className='name-stats'>Queries</p>
                     </div>
                </div>
+               <BtnToggle />
+          </div>
+               <Image />
+          </div>
           </div>
      )
 }

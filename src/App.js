@@ -1,14 +1,16 @@
-import './App.css';
+import React from 'react'
+import './App.css'
+import ThemeContextProvider from './Context/ThemeContext';
 import Card from './Components/Card'
-import Image from './Components/Image'
 
-function App() {
+export default function App() {
+
   return (
     <div className="App">
-      <Card />
-      <Image />
+      <ThemeContextProvider>
+        <Card />
+      </ThemeContextProvider>
     </div>
   );
 }
 
-export default App;

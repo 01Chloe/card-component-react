@@ -1,5 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
+.container{
+     height: 100vh;
+     width: 100vw;
+     background: #0a0c1b;
+     transition: background 0.3s ease-out;
+}
+.container.light{
+     background: #ccc;
+}
+.container.dark{
+     background: #0a0c1b;
+}
+.card{
+     position:absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     background: #1c1938;
+     color: #f1f1f1;
+     width: 1100px;
+     height: 60vh;
+     border-radius: 8px;
+     transition: background 0.3s ease-out, color 0.3s ease-out;
+}
+.card.light{
+     background: #f1f1f1;
+     color: #1c1938;
+}
+.card.dark{
+     background: #1c1938;
+     color: #f1f1f1;
+}
 .card-component{
      padding: 15px 50px;
      font-family: 'Rubik', sans-serif;
@@ -13,7 +49,13 @@ h1{
      opacity: 0.8;
 }
 span{
+     transition: color 0.3s ease-out;
+}
+.span.purple{
      color: #b759cb;
+}
+.span.yellow{
+     color: #d6b118;
 }
 .group-stats{
      display: flex;
@@ -29,4 +71,12 @@ h2{
      margin: 0;
      margin-top: 5px;
      text-transform: uppercase;
+}
+
+@media screen and (max-width: 1100px) {
+     .card{
+          flex-direction: column;
+          width: auto;
+          height: auto;
+     }
 }
